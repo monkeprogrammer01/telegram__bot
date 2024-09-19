@@ -118,13 +118,6 @@ def compliment_sender(message):
 def time_sender(message):
     bot.send_message(message.chat.id, f'Сейчас время {str(datetime.datetime.now())[10:16]}')
 
-@bot.message_handler(commands=['my_girl'])
-def my_girls_instagram(message):
-    """Function that sends link to instagram account of my girl"""
-    markup = types.InlineKeyboardMarkup()
-    markup.add(types.InlineKeyboardButton('girl', url='https://www.instagram.com/b_di.i/'))
-    bot.send_message(message.chat.id, 'my', reply_markup=markup)
-
 
 @bot.message_handler(commands=['my_instagram'])
 def my_instagram(message):
